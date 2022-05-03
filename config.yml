@@ -1,0 +1,40 @@
+---
+# paths to data
+html_vk_messages_paths:
+# path to parsed data
+messages_dataset_path:
+# substrings in messages that need to be deleted (if any)
+substrings_to_delete_in_messages:
+# copy times of dataset in order to increase it's size
+how_many_times_to_copy_msg_df: 2
+# neural net's parameters
+number_of_hidden_layers: 512
+number_of_lstm_layers: 2
+number_of_features_in_linear: 1024
+number_of_sequences: 50
+number_of_steps_per_window: 1000
+number_of_epochs: 1
+learning_rate: 0.001
+cuda: True
+print_every_n_epoch: 50
+# fraction of the dataset to be used in validation
+valid_fraction: 0.2
+# parameters for message generation
+top_k_probs: 5
+temperature: 0.7
+# telegram bot token
+api_key:
+# telegram bot greeting message when command \start is used
+greeting_message: Привет!
+# possible length of generated messages by telegram bot
+messages_lengths:
+  - 50
+  - 100
+  - 200
+  - 500
+  - 1000
+# min and max length of the start of the generated message that will be
+# passed to the model
+prime_length:
+  - 5
+  - 21
