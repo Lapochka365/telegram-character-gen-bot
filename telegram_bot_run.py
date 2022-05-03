@@ -1,9 +1,9 @@
 import yaml
 import telebot
-from src.model_training.model_train import NeuralNet
+from model_train import NeuralNet
 import os.path
 import torch
-from src.model_training.generate_message import sample
+from generate_message import sample
 import numpy as np
 import emoji
 import pickle
